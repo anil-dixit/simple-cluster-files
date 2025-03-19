@@ -3,28 +3,7 @@
 #adding java for jenkins
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install openjdk-17-jre -y
-java --version
 
-# Install required dependencies
-sudo apt install -y unzip curl
-
-# Download the AWS CLI installer
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-
-# Unzip the installer
-unzip -q awscliv2.zip
-
-# Install AWS CLI
-sudo ./aws/install
-
-# Verify installation
-aws --version
-
-# Clean up installation files
-rm -rf aws awscliv2.zip
-
-echo "AWS CLI installation completed successfully!"
 
 # Add Docker's official GPG key:
 sudo apt-get update -y
