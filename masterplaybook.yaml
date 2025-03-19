@@ -3,14 +3,9 @@
   hosts: localhost 
   become: true 
   tasks:
-   - name: Copy installation script to remote host
-     copy:
-      src: /home/ubuntu/masterinstallation_script.sh
-      dest: /tmp/installation_script.sh
-      mode: '0755'
-
+  
    - name: Execute the installation script
-     command: /tmp/installation_script.sh
+     command: /home/ubuntu/k8s/masterinstallation_script.sh
 
    - name: Run additional command and register output
      command: sudo kubeadm init --apiserver-advertise-address={privateIp} --pod-network-cidr=10.244.0.0/16
