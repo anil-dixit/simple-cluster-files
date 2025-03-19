@@ -3,7 +3,6 @@ pipeline {
         label 'test'
     }
     environment{
-        DOCKER_CREDENTIALS=credentials("dockerhub-credentials")
         GITHUB_CREDENTIALS = credentials("github-credentials")
         IMAGE_TAG = "v${BUILD_NUMBER}"
     }
