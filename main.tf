@@ -6,6 +6,7 @@ resource "aws_instance" "kubernetes-slave1" {
   tags = {
     Name = "Kubernetes-Slave1-test"
   }
+  key_name      = var.key_name
   ami           = var.instance_ami
   instance_type = var.slave_instance_type
   subnet_id     = var.subnet_id
@@ -18,6 +19,7 @@ resource "aws_instance" "kubernetes-slave2" {
   tags = {
     Name = "Kubernetes-Slave2-prod"
   }
+  key_name      = var.key_name
   ami           = var.instance_ami
   instance_type = var.slave_instance_type
   subnet_id     = var.subnet_id
